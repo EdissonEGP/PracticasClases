@@ -18,7 +18,6 @@ class Test01 {
 	By repeatPassword = By.name("repassword");
 	By bottomFinish = By.xpath("//*[@id=\'root\']/main/div/form/button");
 	By bottomLogin = By.xpath("//*[@id=\'root\']/header/nav/a[2]");
-	By messageHola = By.className("txt-hola");
 	
 	@BeforeEach
 	public void setUp() {
@@ -35,9 +34,6 @@ class Test01 {
 		driver.findElement(email).sendKeys("prueba9@prueba.com");
 		driver.findElement(password).sendKeys("pass123");
 		driver.findElement(bottomFinish).click();
-		String res=driver.findElement(messageHola).getText();
-		System.out.println("Resulta" + res);
-		
 	}
 	@Test
 	public void registerUser() {
